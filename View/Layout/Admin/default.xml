@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="html" attr="lang='en-US'" weight="1">
 	<head xml:id="head" weight="1">
-
+		<template xml:id="header_meta" vendor="Opoink" module="Bmodule" template="admin/header/meta.phtml" cacheable="1" max-age="2592000"/>
+		<template xml:id="header_title" vendor="Opoink" module="Bmodule" template="admin/header/title.phtml" />
+		<template xml:id="header_css" vendor="Opoink" module="Bmodule" template="admin/header/css.phtml" cacheable="1" max-age="2592000" />
 	</head>
 	<body xml:id="body" weight="1">
         <container xml:id="root" htmlId="root">

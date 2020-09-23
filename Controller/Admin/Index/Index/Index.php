@@ -1,9 +1,9 @@
 <?php
 namespace Opoink\Bmodule\Controller\Admin\Index\Index;
 
-class Index extends \Of\Controller\Controller {
+class Index extends \Opoink\Bmodule\Controller\Admin\Controller {
 
-	protected $pageTitle = 'Index Index Index';
+	protected $pageTitle = 'Admin Dashboard';
 	protected $_url;
 	protected $_message;
 
@@ -11,7 +11,7 @@ class Index extends \Of\Controller\Controller {
 		\Of\Http\Url $Url,
 		\Of\Std\Message $Message
 	){
-
+		parent::__construct();
 		$this->_url = $Url;
 		$this->_message = $Message;
 	}
