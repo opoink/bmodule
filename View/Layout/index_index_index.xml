@@ -5,8 +5,8 @@
 	</head>
 	<body xml:id="body" weight="1">
 
-		<container xml:id="main_container" htmlId="main_container" htmlClass="main_container" weight="1">
+		<!-- <container xml:id="main_container" htmlId="main_container" htmlClass="main_container" weight="1">
 			<template xml:id="sample_template" vendor="Opoink" module="Bmodule" template="sample_template.phtml"/>
-		</container>
+		</container> -->
 	</body>
 </html>

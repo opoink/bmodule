@@ -5,9 +5,27 @@
 		<template xml:id="header_title" vendor="Opoink" module="Bmodule" template="admin/header/title.phtml" />
 		<template xml:id="header_css" vendor="Opoink" module="Bmodule" template="admin/header/css.phtml" cacheable="1" max-age="2592000" />
 	</head>
-	<body xml:id="body" weight="1">
-        <container xml:id="root" htmlId="root">
-            
+	<body xml:id="body" weight="1" attr='class="hold-transition sidebar-mini"'>
+        <container xml:id="wrapper" htmlId="wrapper" htmlClass="wrapper">
+
+        	<!-- top nav bar "header" -->
+	        <container xml:id="mainheader" htmlTag="nav" htmlClass="main-header navbar navbar-expand navbar-white navbar-light">
+				<template xml:id="navbarnav" vendor="Opoink" module="Bmodule" template="admin/navbar/nav.phtml" cacheable="1" max-age="604800"/>
+				<container xml:id="navbarnavmlauto" htmlTag="ul" htmlClass="navbar-nav ml-auto">
+					<template xml:id="messagesdropdownmenu" vendor="Opoink" module="Bmodule" template="admin/navbar/message.phtml"/>
+					<template xml:id="notificationsdropdownmenu" vendor="Opoink" module="Bmodule" template="admin/navbar/notifications.phtml"/>
+				</container>
+	        </container>
+	        <!-- end top nav bar "header" -->
+
+	        <container xml:id="mainsidebar" htmlTag="aside" htmlClass="main-sidebar sidebar-dark-primary elevation-4">
+	        	<template xml:id="brandlink" vendor="Opoink" module="Bmodule" template="admin/sidebar/brandlink.phtml"/>
+	        	<container xml:id="sidebar" htmlClass="sidebar">
+	        		<template xml:id="userpanel" vendor="Opoink" module="Bmodule" template="admin/sidebar/userpanel.phtml"/>
+	        	</container>
+	        </container>
         </container>
+
+        <template xml:id="scripts" vendor="Opoink" module="Bmodule" template="admin/scripts.phtml"/>
 	</body>
 </html>

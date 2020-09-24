@@ -6,8 +6,8 @@
 		</template>
 	</head>
 	<body xml:id="body" weight="1">
-		<container xml:id="root">
+		<!-- <container xml:id="wrapper">
 			<template xml:id="sample_template" vendor="Opoink" module="Bmodule" template="admin/sample_template.phtml" cacheable="1" max-age="604800"/>
-		</container>
+		</container> -->
 	</body>
 </html>

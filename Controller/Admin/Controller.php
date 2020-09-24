@@ -15,19 +15,12 @@ class Controller extends \Of\Controller\Controller {
 			$deployDir .= include($generationFile);
 		}
 
-		// if(!is_dir($deployDir)){
-		// 	$dirMan = new \Of\File\Dirmanager();
-		// 	$dirMan->createDir($deployDir);
-		// }
+		$dist = $deployDir.DS.'dist';
+		if(!is_dir($dist)){
 
-		// if(is_dir($deployDir)){
-			$dist = $deployDir.DS.'dist';
-			if(!is_dir($dist)){
-
-				$dirMan = new \Of\File\Dirmanager();
-				$dirMan->copyDir(ROOT.DS.'App'.DS.'Ext'.DS.'Opoink'.DS.'Bmodule'.DS.'View'.DS.'dist', $dist);
-			}
-		// }
+			$dirMan = new \Of\File\Dirmanager();
+			$dirMan->copyDir(ROOT.DS.'App'.DS.'Ext'.DS.'Opoink'.DS.'Bmodule'.DS.'View'.DS.'dist', $dist);
+		}
 	}
 
 	public function run(){
