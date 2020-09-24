@@ -18,12 +18,17 @@
 	        </container>
 	        <!-- end top nav bar "header" -->
 
+	        <!-- sidebar -->
 	        <container xml:id="mainsidebar" htmlTag="aside" htmlClass="main-sidebar sidebar-dark-primary elevation-4">
 	        	<template xml:id="brandlink" vendor="Opoink" module="Bmodule" template="admin/sidebar/brandlink.phtml"/>
 	        	<container xml:id="sidebar" htmlClass="sidebar">
 	        		<template xml:id="userpanel" vendor="Opoink" module="Bmodule" template="admin/sidebar/userpanel.phtml"/>
+	        		<container xml:id="sidebarmenu" htmlTag="nav" htmlClass="mt-2 sidebar-menu">
+	        			<template xml:id="sidebarmenulist" vendor="Opoink" module="Bmodule" template="admin/sidebar/sidebarmenulist.phtml"/>
+	        		</container>
 	        	</container>
 	        </container>
+	        <!-- end sidebar -->
         </container>
 
         <template xml:id="scripts" vendor="Opoink" module="Bmodule" template="admin/scripts.phtml"/>
