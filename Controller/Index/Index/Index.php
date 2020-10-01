@@ -20,15 +20,14 @@ class Index extends \Of\Controller\Controller {
 		// // var_dump($this->_di->get('\Of\Database\Connection')->getConnection());
 		// $this->Connection->setConfig()->connect();
 		$entity->getConnection();
-		$entity->_select->from(['profile' => 'p'])
-		->from(['users' => 'u'])
-		->select([
-			'u.name' => 'uname', 
-			'p.email' => 'pemail', 
-			'p.age' => 'page'
-		]);
-
-		$entity->_select->getLastQuery();
+		$entity->getSelect()
+		->select(['u.email'])
+		->select(['up.firstname' => 'upfirstname'])
+		->from(['user' => 'u', 'users_profile' => 'up'])
+		->where('u.email', '=', 'asdasd')
+		->where('u.pass', '=', 'xcvxcvcvx')
+		->getQuery()
+		;
 	}
 
 	public function run(){
