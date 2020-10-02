@@ -24,8 +24,18 @@ class Index extends \Of\Controller\Controller {
 		->select(['u.email'])
 		->select(['up.firstname' => 'upfirstname'])
 		->from(['user' => 'u', 'users_profile' => 'up'])
-		->where('u.email', '=', 'asdasd')
-		->where('u.pass', '=', 'xcvxcvcvx')
+		// ->where('u.email')->eq('asdads@ya.com')
+		// ->where('u.pass')->ne('asdasd')
+		// ->where('u.pass')->lt(18)
+		// ->where('u.pass')->gt(19)
+		// ->where('u.pass')->ltoe(19)
+		// ->where('u.pass')->gtoe(19)
+		// ->where('u.pass')->between(19, 25)
+		// ->where('u.pass')->notBetween(19, 25)
+		// ->where('u.pass')->in(['asdasd', 'werwer'])
+		->where('u.pass')->notIn(['asdasd', 'werwer'])
+		/*->where('u.pass', '=', 'xcvxcvcvx')*/
+		/*->orWhere('u.pass', '=', 'xcvxcvcvx')*/
 		->getQuery()
 		;
 	}
