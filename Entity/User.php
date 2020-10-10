@@ -12,29 +12,30 @@ class User extends \Of\Database\Entity {
 		// ->where('sa.id')->in(function($sub){
 			
 		// })
-		// ->where('sa.id')->eq(function($sub){
-		// 	$sub
-		// 	->select('id')
-		// 	->from('system_admin')
-		// 	->where('firstname')->eq('ron')
-		// 	->orWhere('lastname')->eq('perez');
-		// })
-		->min('id')
-		->max('id')
-		->group(function($sub){
+		->where('sa.id')->eq(function($sub){
 			$sub
-			->group(function($subd1){
-				$subd1
-				->where('sa.firstname')->eq('ron')
-				->where('sa.lastname')->eq('perez');
-			}, false)
-			->orGroup(function($subd2){
-				$subd2
-				->where('sa.firstname')->eq('ron2')
-				->where('sa.lastname')->eq('perez2');
-			})
-			;
+			->select('id')
+			->from('system_admin')
+			->where('firstname')->eq('ron')
+			->orWhere('lastname')->eq('perez');
 		})
+		->join('profile', 'p', 'LEFT')->onJoin('asdasd.asd', 'asdaasd.dasd')->andJoin('asdasd.asd', 'asdaasd.dasd')->orJoin('asdasd.asd', 'asdaasd.dasd')
+		// ->min('id')
+		// ->max('id')
+		// ->group(function($sub){
+		// 	$sub
+		// 	->group(function($subd1){
+		// 		$subd1
+		// 		->where('sa.firstname')->eq('ron')
+		// 		->where('sa.lastname')->eq('perez');
+		// 	}, false)
+		// 	->orGroup(function($subd2){
+		// 		$subd2
+		// 		->where('sa.firstname')->eq('ron2')
+		// 		->where('sa.lastname')->eq('perez2');
+		// 	})
+		// 	;
+		// })
 		;
 
 
