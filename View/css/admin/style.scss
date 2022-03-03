@@ -1,0 +1,119 @@
+@import './vars';
+@import './mixin';
+
+// @include loop(0, 150, 5, ".m-", "-px", "margin", "px", "!important");
+// @include loop(0, 150, 5, ".mt-", "-px", "margin-top", "px", "!important");
+// @include loop(0, 150, 5, ".mr-", "-px", "margin-right", "px", "!important");
+// @include loop(0, 150, 5, ".ml-", "-px", "margin-left", "px", "!important");
+// @include loop(0, 150, 5, ".mb-", "-px", "margin-bottom", "px", "!important");
+
+// @include loop(-100, 0, 5, ".m-", "-px", "margin", "px", "!important");
+// @include loop(-100, 0, 5, ".mt-", "-px", "margin-top", "px", "!important");
+// @include loop(-100, 0, 5, ".mr-", "-px", "margin-right", "px", "!important");
+// @include loop(-100, 0, 5, ".ml-", "-px", "margin-left", "px", "!important");
+// @include loop(-100, 0, 5, ".mb-", "-px", "margin-bottom", "px", "!important");
+
+// @include loop(0, 100, 5, ".p-", "", "padding", "px", "!important");
+// @include loop(0, 100, 5, ".pt-", "", "padding-top", "px", "!important");
+// @include loop(0, 100, 5, ".pr-", "", "padding-right", "px", "!important");
+// @include loop(0, 100, 5, ".pl-", "", "padding-left", "px", "!important");
+// @include loop(0, 100, 5, ".pb-", "", "padding-bottom", "px", "!important");
+
+// @include loop(1, 600, 5, ".w-", "-px", "width", "px", "!important");
+// @include loop(1, 600, 5, ".h-", "-px", "height", "px", "!important");
+
+// @include loop(0, 100, 5, ".w-", "-per", "width", "%", "!important");
+// @include loop(0, 100, 5, ".h-", "-per", "height", "%", "!important");
+
+// @include loop(1, 10, 1, ".ls-", "-px", "letter-spacing", "px", "!important");
+
+@include loop(1, 900, 100, ".fs-", "", "font-weight", "", "!important");
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.admin {
+	
+	.side_menu {
+		position: fixed;
+		// width: 300px;
+		height: 100%;
+		// left: -300px;
+		top: 0;
+		z-index: 3;
+		background: $sideNavBG;
+
+		.menu-header {
+			height: $headerHeight;
+			display: flex;
+			align-items: center;
+		}
+
+		.side-menu-label {
+			transition: all .3s ease 0s;
+			color:#ffffff;
+			width: 0px;
+			white-space: nowrap;
+  			overflow: hidden;
+		}
+
+		.menu-item {
+			height: 50px;
+			display: flex;
+			align-items: center;
+
+			&:hover {
+				background-color: #343a40;
+			}
+
+			.side-menu-label {
+				height: 40px;
+				display: flex;
+				align-items: center;
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+
+		.side-menu-icon {
+			height: 40px;
+			width: 40px;
+			margin: 0px 15px;
+
+			img {
+				width: 100%;
+			}
+
+			i {
+				color: #fff;
+				font-size: 1.5em;
+			}
+
+			&.faicon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+
+	&.side-nav-fixed {
+		.side_menu {
+			.side-menu-label {
+				width: 230px;
+			}
+		}
+	}
+}
