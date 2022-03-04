@@ -109,11 +109,23 @@ a:hover {
 		}
 	}
 
+	.container_wrapper {
+		.main-header {
+			height: $headerHeight;
+			border-bottom: solid 1px #d9d9d9;
+		}
+	}
+
 	&.side-nav-fixed {
 		.side_menu {
 			.side-menu-label {
 				width: 230px;
 			}
+		}
+
+		.container_wrapper {
+			width: calc(100% - 300px);
+			margin-left: 300px;
 		}
 	}
 }
