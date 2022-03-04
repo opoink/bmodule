@@ -1,8 +1,18 @@
 define([
 	'jquery',
-	'vue-init'
-], function($, vInit) {
+	'vue-init',
+	'request'
+], function($, vInit, req) {
 	vInit.mount().then(res => {
-		vInit.loadOtherComponents();
+
+		let url = '/opoink/bmodule/admin/vue/component/allcomponents';
+		req.doRequest(url, '', 'GET').then(components => {
+			components.forEach(component => {
+				vInit.getComponent(component);
+			});
+		}).catch(error => {
+
+		});
+		
 	});
 });

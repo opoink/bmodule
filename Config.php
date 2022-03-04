@@ -7,7 +7,15 @@ return array (
   array (
     'admin_index_index_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Index\\Index\\Index',
     'admin_adminuser_index_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Adminuser\\Index\\Index',
+    'admin_settings_index_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Settings\\Index\\Index',
     0 => 
+    array (
+      'pattern' => '/opoink/bmodule/admin/vue/component/allcomponents',
+      'class' => 'Opoink\\Bmodule\\Controller\\Opoink\\Bmodule\\Admin\\Vue\\Component\\Allcomponents',
+      'page_name' => 'Opoink\\Bmodule\\Admin\\Vue\\Component\\Allcomponents',
+      'method' => 'GET',
+    ),
+    1 => 
     array (
       'pattern' => '/opoink/bmodule/admin/vue/component/:componentname',
       'class' => 'Opoink\\Bmodule\\Controller\\Opoink\\Bmodule\\Admin\\Vue\\Component\\ComponentName',

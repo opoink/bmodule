@@ -1,8 +1,8 @@
 <div class="menu-item">
 	<div class="side-menu-icon faicon">
-		<a href="<?= $this->getAdminUrl('settings'); ?>"><i class="fa-solid fa-gauge"></i></a>
+		<router-link to="<?= $this->getAdminUrlNoDomain('settings'); ?>"><i class="fa-solid fa-gauge"></i></router-link>
 	</div>
 	<div class="side-menu-label">
-		<a href="<?= $this->getAdminUrl('settings'); ?>">Setings</a>
+		<router-link to="<?= $this->getAdminUrlNoDomain('settings'); ?>">Setings</router-link>
 	</div>
 </div>

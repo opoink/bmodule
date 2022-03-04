@@ -4,7 +4,7 @@ define([
 	return {
 		vue: null,
 		vueRouter: null,
-		components: [],
+		components: {},
 
 		/**
 		 * retreive page name like
@@ -46,6 +46,19 @@ define([
 				Vue.use(VueRouter);
 			
 				new Vue({
+					data: () => {
+						return {
+							message: '',
+							toggleSideNav: () => {
+								if($('body').hasClass('side-nav-fixed')){
+									$('body').removeClass('side-nav-fixed');
+								}
+								else {
+									$('body').addClass('side-nav-fixed');
+								}
+							}
+						}
+					},
 					beforeMount: () => {
 						this.getComponent(this.getPageName());
 					},
@@ -61,9 +74,14 @@ define([
 			this.vueRouter.addRoutes([options]);
 		},
 		getComponent: function(cName){
-			require([
-				'/opoink/bmodule/admin/vue/component/' + cName + '.js'
-			], function(){});
+			let a = this;
+			if(typeof a.components[cName] == 'undefined'){
+				require([
+					'/opoink/bmodule/admin/vue/component/' + cName + '.js'
+				], function(c){
+					a.components[cName] = true;
+				});
+			}
 		},
 		loadOtherComponents: function(){
 			console.log('loadOtherComponents loadOtherComponents');

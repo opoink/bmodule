@@ -110,6 +110,10 @@ a:hover {
 	}
 
 	.container_wrapper {
+		transition: all .3s ease 0s;
+		width: calc(100% - 70px);
+		margin-left: 70px;
+
 		.main-header {
 			height: $headerHeight;
 			border-bottom: solid 1px #d9d9d9;
