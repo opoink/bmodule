@@ -1,7 +1,4 @@
 <div class="menu-header">
-	<!-- <button type="button" class="close d-md-block d-lg-none">
-		<span>×</span>
-	</button> -->
 	
 	<div class="side-menu-icon menu-header-logo">
 		<img src="<?= $this->getImageUrl([
@@ -12,8 +9,12 @@
 		]) ?>">
 	</div>
 
-	<div class="side-menu-label">
+	<div class="side-menu-label menu-header-label">
 		<span class="fs-800">Opoink</span> Admin
+		
+		<button type="button" class="close" v-on:click="toggleSideNav()">
+			<span><i class="fa-solid fa-arrow-left"></i></span>
+		</button>
 	</div>
 </div>
 <div class="menu-body">

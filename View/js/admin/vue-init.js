@@ -60,31 +60,36 @@ define([
 						}
 					},
 					beforeMount: () => {
-						this.getComponent(this.getPageName());
+						// this.getComponent(this.getPageName());
 					},
 					mounted: () => {
+						if($(window).outerWidth() < 992) {
+							$('body').removeClass('side-nav-fixed');
+						}
+
 						$('#main_container').removeClass('d-none');
+						$('#main-page-loader').addClass('d-none');
 						resolve(true);	
 					},
 					router: this.vueRouter
 				}).$mount('#main_container');
 			});
 		},
-		addRoute: function(options) {
-			this.vueRouter.addRoutes([options]);
-		},
-		getComponent: function(cName){
-			let a = this;
-			if(typeof a.components[cName] == 'undefined'){
-				require([
-					'/opoink/bmodule/admin/vue/component/' + cName + '.js'
-				], function(c){
-					a.components[cName] = true;
-				});
-			}
-		},
-		loadOtherComponents: function(){
-			console.log('loadOtherComponents loadOtherComponents');
-		}
+		// addRoute: function(options) {
+		// 	this.vueRouter.addRoutes([options]);
+		// },
+		// getComponent: function(cName){
+		// 	let a = this;
+		// 	if(typeof a.components[cName] == 'undefined'){
+		// 		require([
+		// 			'/opoink/bmodule/admin/vue/component/' + cName + '.js'
+		// 		], function(c){
+		// 			a.components[cName] = true;
+		// 		});
+		// 	}
+		// },
+		// loadOtherComponents: function(){
+		// 	console.log('loadOtherComponents loadOtherComponents');
+		// }
 	};
 });

@@ -29,6 +29,10 @@
 
 @include loop(1, 900, 100, ".fs-", "", "font-weight", "", "!important");
 
+body {
+	min-width: 36px;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -36,6 +40,56 @@ a {
 a:hover {
 	text-decoration: none;
 	color: inherit;
+}
+.main-page-loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 999;
+
+	.main-loader {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.lds-ripple {
+		display: inline-block;
+		position: relative;
+		width: 80px;
+		height: 80px;
+	}
+	.lds-ripple div {
+		position: absolute;
+		border: 4px solid #fff;
+		opacity: 1;
+		border-radius: 50%;
+		animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	}
+	.lds-ripple div:nth-child(2) {
+		animation-delay: -0.5s;
+	}
+	@keyframes lds-ripple {
+		0% {
+			top: 36px;
+			left: 36px;
+			width: 0;
+			height: 0;
+			opacity: 1;
+		}
+		100% {
+			top: 0px;
+			left: 0px;
+			width: 72px;
+			height: 72px;
+			opacity: 0;
+		}
+	}
+	  
 }
 
 .admin {
@@ -55,12 +109,34 @@ a:hover {
 			align-items: center;
 		}
 
+		.menu-header-label {
+			.close {
+				color: #fff;
+				background: #1F262D;
+				border: 0;
+				right: -40px;
+				position: absolute;
+				width: 40px;
+				height: $headerHeight;
+				top: 0;
+				font-size: 18px;
+				display: none;
+			}
+		}
+
 		.side-menu-label {
 			transition: all .3s ease 0s;
 			color:#ffffff;
 			width: 0px;
 			white-space: nowrap;
   			overflow: hidden;
+		}
+		
+
+		&:hover {
+			.side-menu-label {
+				width: 230px;
+			}
 		}
 
 		.menu-item {
@@ -98,7 +174,7 @@ a:hover {
 
 			i {
 				color: #fff;
-				font-size: 1.5em;
+				font-size: 1.2em;
 			}
 
 			&.faicon {
@@ -125,11 +201,19 @@ a:hover {
 			.side-menu-label {
 				width: 230px;
 			}
+
+			.menu-header-label {
+				.close {
+					display: block;
+				}
+			}
 		}
 
-		.container_wrapper {
-			width: calc(100% - 300px);
-			margin-left: 300px;
-		}
+		// .container_wrapper {
+		// 	width: calc(100% - 300px);
+		// 	margin-left: 300px;
+		// }
 	}
 }
+
+@import './min_width_992';
