@@ -3,10 +3,11 @@
 	<head xml:id="head" weight="1">
 		<template xml:id="html_head" vendor="Opoink" module="Bmodule" template="admin/html_head.phtml" cacheable="1" max-age="604800"/>
 		<css src="css/admin/style" type="scss" media="all" />
+		<template xml:id="jscript" vendor="Opoink" module="Bmodule" template="admin/html_jscript.phtml" cacheable="1" max-age="604800"/>
 	</head>
 	<body xml:id="body" attr="class='admin side-nav-fixed'" weight="1">
 		<template xml:id="main_page_loader" vendor="Opoink" module="Bmodule" template="admin/main-page-loader.phtml" cacheable="1" max-age="604800"/>
-		<container xml:id="main_container" htmlId="main_container" htmlClass="main_container d-none" weight="1">
+		<container xml:id="main_container" htmlId="main_container" htmlClass="main_container" weight="1">
 			<container xml:id="side_menu" htmlId="side_menu" htmlClass="side_menu" weight="1">
 				<template xml:id="side_menu_header" vendor="Opoink" module="Bmodule" template="admin/side_menu_header.phtml" cacheable="1">
 					<template class="Opoink\Bmodule\Block\Admin\Context" xml:id="side_menu_body_dashboard" vendor="Opoink" module="Bmodule" template="admin/sidemenu/dashboard.phtml" cacheable="1"/>
@@ -21,7 +22,5 @@
 				</container>
 			</container>
 		</container>
-
-		<template xml:id="jscript" vendor="Opoink" module="Bmodule" template="admin/html_jscript.phtml" cacheable="1" max-age="604800"/>
 	</body>
 </html>

@@ -6,15 +6,14 @@
 namespace Opoink\Bmodule\Block\Admin;
 
 class Context extends \Of\Html\Context {
+	
+	public function __construct(
+		\Of\Http\Url $Url,
+		\Of\Config $Config
+	){
+		parent::__construct($Url, $Config);
+	}
 
-	// public function __construct(
-	// 	\Of\Http\Url $Url,
-	// 	\Of\Config $Config,
-	// 	\Of\Route\Router $Router
-	// ){
-	// 	parent::__construct($Url, $Config);
-	// 	$this->_router = $Router;
-	// }
 
 	protected function getAdminUrlNoDomain($path='', $param=array()){
 		$p = ltrim($path, '/');

@@ -216,4 +216,17 @@ a:hover {
 	}
 }
 
+.main_body_content {
+	overflow: hidden;
+	overflow: hidden;
+	padding: 50px 15px 0px 15px;
+}
+
+.page-top-bottons {
+	border-bottom: 1px solid #e3e3e3;
+	border-top: 1px solid #e3e3e3;
+	padding: 1.5rem;
+	margin: 0 0 3rem;
+}
+
 @import './min_width_992';
