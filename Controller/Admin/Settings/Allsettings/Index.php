@@ -1,9 +1,9 @@
 <?php
-namespace Opoink\Bmodule\Controller\Admin\Settings\Index;
+namespace Opoink\Bmodule\Controller\Admin\Settings\Allsettings;
 
 class Index extends \Of\Controller\Controller {
 
-	protected $pageTitle = 'Settings Index Index';
+	protected $pageTitle = 'Settings';
 	protected $_url;
 	protected $_message;
 

@@ -7,7 +7,7 @@ return array (
   array (
     'admin_index_index_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Index\\Index\\Index',
     'admin_adminuser_index_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Adminuser\\Index\\Index',
-    'admin_settings_index_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Settings\\Index\\Index',
+    'admin_settings_allsettings_index' => '\\Opoink\\Bmodule\\Controller\\Admin\\Settings\\Allsettings\\Index',
     0 => 
     array (
       'pattern' => '/opoink/bmodule/admin/vue/component/allcomponents',

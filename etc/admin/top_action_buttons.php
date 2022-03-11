@@ -4,7 +4,7 @@
 * Licensed under MIT, see LICENSE.md
 */
 return [
-	'admin_settings_index_index' => [
+	'admin_settings_allsettings_index' => [
 		[
 			'label' => 'save',
 			'html_attr' => [
