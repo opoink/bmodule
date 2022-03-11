@@ -2,7 +2,10 @@
 <html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="html" attr="lang='en-US'" weight="1">
 	<head xml:id="head" weight="1">
 		<template xml:id="html_head" vendor="Opoink" module="Bmodule" template="admin/html_head.phtml" cacheable="1" max-age="604800"/>
+
 		<css src="css/admin/style" type="scss" media="all" />
+		<css src="css/fontawesome-free-6.0.0-web/css/all" media="all" />
+
 		<template xml:id="jscript" vendor="Opoink" module="Bmodule" template="admin/html_jscript.phtml" cacheable="1" max-age="604800"/>
 	</head>
 	<body xml:id="body" attr="class='admin side-nav-fixed'" weight="1">

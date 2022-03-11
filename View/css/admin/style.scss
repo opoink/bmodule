@@ -161,6 +161,25 @@ a:hover {
 					align-items: center;
 				}
 			}
+
+			&.sub-menu {
+				.side-menu-icon {
+					i {
+						color: #fff;
+						font-size: .7em;
+					}
+				}
+			}
+
+			&.with-sub {
+				position: relative;
+				
+				&:after {
+					content: ">";
+					display: block;
+					position: absolute;
+				}
+			}
 		}
 
 		.side-menu-icon {
