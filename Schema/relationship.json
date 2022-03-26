@@ -1,0 +1,29 @@
+[
+    {
+        "tablename": "cms",
+        "constraint_name": "cms_test",
+        "on_delete": "ON DELETE CASCADE",
+        "on_updated": "",
+        "column": "code",
+        "reference_tablename": "asd",
+        "reference_column": "asd"
+    },
+    {
+        "tablename": "users",
+        "constraint_name": "users_ibfk_1",
+        "on_delete": "ON DELETE CASCADE",
+        "on_updated": "ON UPDATE CASCADE",
+        "column": "create_by",
+        "reference_tablename": "admins",
+        "reference_column": "admins_id"
+    },
+    {
+        "tablename": "users",
+        "constraint_name": "users_ibfk_2",
+        "on_delete": "ON DELETE CASCADE",
+        "on_updated": "",
+        "column": "create_by",
+        "reference_tablename": "cms",
+        "reference_column": "cms_id"
+    }
+]
